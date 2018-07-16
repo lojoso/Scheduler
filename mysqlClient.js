@@ -7,6 +7,7 @@ var sendEmail = require('./mailClient')
 
 
 var writeExcelFile = (headers,data,name) => {
+    if(!fs.existsSync('./output')) fs.mkdirSync('./output')
     fs.writeFileSync('./output/'+name+'.xlsx',xlsx.build([{ name:'sheet1', data:[headers.map(f => f.title)]
             .concat(data).concat([headers.map(n => n.sum)])}]),{'flag':'w'});
     console.log("....build excel success!")
@@ -25,7 +26,8 @@ var tl = tunnel(config.ssh,(err,server) => {
             return elem[column.title]
         })),conf.fileName);
         count = count -1;
-        if(count === 0) sendEmail({attachments:require('./config/query').config
+        if(count === 0)
+            sendEmail({attachments:require('./config/query').config
                 .map(elem => {return {filename:elem.fileName+".xlsx", path:'./output/'+elem.fileName+'.xlsx'}})});
     }))
 })
