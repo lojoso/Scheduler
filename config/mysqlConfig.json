@@ -1,0 +1,20 @@
+{
+  "mysql":{
+    "host": "127.0.0.1",
+    "port": 50050,
+    "user": "root",
+    "password": "chargepile",
+    "database": "icharge",
+    "connectionLimit": 10
+  },
+  "ssh":{
+    "username":"root",
+    "password":"qc@729",
+    "host":"223.112.89.148",
+    "port":65022,
+    "dstHost":"10.130.26.1",
+    "dstPort":65306,
+    "localHost":"127.0.0.1",
+    "localPort": 50050
+  }
+}

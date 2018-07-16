@@ -1,0 +1,11 @@
+{
+  "name": "Scheduler",
+  "version": "0.0.1",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "mysql": "^2.15.0",
+    "node-xlsx": "^0.12.1",
+    "nodemailer": "^4.6.7",
+    "tunnel-ssh": "^4.1.4"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "host": "smtp.163.com",
+  "port": 465,
+  "secure": true,
+  "auth": {
+    "user": "daqo_gitlab@163.com",
+    "pass": "dqs20000"
+  }
+}
